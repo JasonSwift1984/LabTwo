@@ -6,6 +6,10 @@ namespace LabTwo
     {
         static void Main(string[] args)
         {
+            
+            bool input = true;
+           
+
             do
             {
                 Console.WriteLine("Welcome to Grand Circus’ Room Detail Generator!" + "\n" + "Enter Length:");
@@ -16,9 +20,11 @@ namespace LabTwo
 
                 double area = length * width;
                 double perimeter = 2 * area;
+                double volume = (2 * width) * length;
 
-                Console.WriteLine(area);
-                Console.WriteLine(perimeter);
+                Console.WriteLine("Area: " + area);
+                Console.WriteLine("Perimeter: " + perimeter);
+                Console.WriteLine("Volume: " + volume);
 
                 Console.WriteLine("Continue? y/n");
                 string answer = Console.ReadLine();
@@ -29,12 +35,15 @@ namespace LabTwo
                 }
                 else
                 {
-
+                    input = false;
 
                 }
 
 
-            } while (true);
+            } while (input);
+
+
+
         }
     }
 }
